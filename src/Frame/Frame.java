@@ -76,16 +76,17 @@ public class Frame {
             numbers[i].setBackground(Color.white);
         }
 
-        //del.setBounds(50, 560, 175, 80);
-        //del.setFont(myFont);
-        //clr.setBounds(250, 560, 175, 80);
-
         panel = new JPanel();
         panel.setBounds(50, 200, 480,480);
         panel.setLayout(new GridLayout(6,4,5,5));
         panel.setBackground(new Color(211,211,211));
+        makePanel();
 
-
+        frame.add(panel);
+        frame.add(textField);
+        frame.setVisible(true);
+    }
+    private void makePanel(){
         panel.add(percent);
         panel.add(del);
         panel.add(clr);
@@ -110,11 +111,5 @@ public class Frame {
         panel.add(numbers[0]);
         panel.add(dec);
         panel.add(equ);
-
-        frame.add(panel);
-        frame.add(textField);
-        frame.setVisible(true);
-
-
     }
 }
